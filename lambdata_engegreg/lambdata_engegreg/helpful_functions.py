@@ -1,12 +1,14 @@
 import pandas as pd
 from random import randrange
 import pytest
-
+"""Simple function that returns the sum of all null values in your dataset"""
 def count_null(df):
     
     return df.isna().sum().sum()
 
-
+"""This function creates a training split out of a provided dataset. 
+You can set the percentage by replacing frac with a 
+percentage value (eg: train_test_split(df, 0.2))"""
 def train_test_split(df, frac):
     train = list()
     train_size = frac * len(df)
